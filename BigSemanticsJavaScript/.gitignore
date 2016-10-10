@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+
+# editor
+*~
+*.swp
+
+# eclipse
+.metadata
+Servers/
+RemoteSystemsTempFiles/
+
+# work in progress
+_wip_*
+

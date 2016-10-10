@@ -1,0 +1,491 @@
+
+@media all{
+.ecologylab-metadataRendering {
+    background: #EEE;
+    border-radius: 8px;
+    border: 1px solid gray;
+    margin: 8px;
+    padding: 8px;
+    min-width: 640px;
+    
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.ecologylab-facetLabel{
+	float:left;
+}
+.ecologylab-metadataContainer {
+
+    font-size: 10px;
+    font-weight: 300;
+
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    min-width: 640px;
+
+    line-height: 15px;
+
+    position: relative;
+    
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+.ecologylab-metadataTableDiv {
+    display: table;
+
+    font-size: 12px;
+    white-space: normal;
+    overflow: scroll;
+    text-overflow: ellipsis;
+
+    border-spacing: 0px;
+    border-collapse:collapse;
+    margin: 0px;
+}
+
+.ecologylab-metadataRow {
+    display: table-row;
+
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0px;
+}
+
+.ecologylab-metadataTable {
+    margin: 0px 4px 0px 6px;
+    width: 100%;
+    table-layout: fixed;
+
+}
+
+.ecologylab-metadataTable tr{
+    width:100%;
+    display: table;
+}
+
+.ecologylab-metadataContainer tr{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0px;
+}
+
+.ecologylab-metadataContainer p{
+    padding: 0px;
+    margin: 0px;
+}
+
+.ecologylab-metadataContainer table{
+    font-size: 12px;
+
+    white-space: normal;
+    overflow: scroll;
+    text-overflow: ellipsis;
+
+    table-layout: fixed;
+    border-spacing: 0px;
+    border-collapse:collapse;
+
+    margin: 0px;
+}
+
+.ecologylab-metadataContainer table .ecologylab-metadata_h1{
+    font-weight: 700;
+	}
+
+.ecologylab-metadataContainer table .ecologylab-metadata_bold{
+    font-weight: 700;
+	}
+
+.ecologylab-metadataContainer table .ecologylab-metadata_normal{
+    font-weight: 300;
+}
+
+.ecologylab-metadataContainer .ecologylab-metadataTableDiv .ecologylab-metadata_italic{
+    font-style: italic;
+}
+
+.ecologylab-metadataContainer .ecologylab-metadataTableDiv .ecologylab-metadata_bolditalic{
+    font-style: italic;
+    font-weight: 700;
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldLabel{
+    white-space: nowrap;
+    color: #808080;
+    vertical-align: top;
+    text-align: right;
+    pointer-events: none;
+    padding: 2px;
+    font-family: arial, sans-serif;
+    margin-left: 6px;
+    margin-right: 8px;
+    width: 100%;
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldLabelImage{
+    width: 35px;
+    height: 35px;
+    max-width: 100px;
+    padding-left: 3px;
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldValue.google_query{
+    color: royalblue;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.ecologylab-fieldValue.google_link{
+    color: #006621;
+    font-weight: bold;
+
+}
+.ecologylab-fieldValue.google_search_result{
+	font-weight: bold;
+	font-size: 14px;
+
+}
+.ecologylab-metadataContainer .ecologylab-fieldValue{
+    white-space: normal;
+    text-align: left;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    color: black;
+  line-height: 15px;
+    font-family: arial, sans-serif;
+    padding: 3px 8px;
+}
+.ecologylab-fieldValue.metadata_h1{
+		  vertical-align: text-bottom;
+
+}
+.ecologylab-metadataContainer .ecologylab-favicon{
+    width: 16px;
+    height: 16px;
+    padding: 2px 0px 1px 8px;
+}
+
+.ecologylab-metadataContainer .ecologylab-faviconICE{
+    width: 16px;
+    height: 16px;
+    padding: 2px 0px 1px 8px;
+    vertical-align: middle;
+}
+
+.ecologylab-metadataContainer .ecologylab-labelCol{
+    display: table-cell;
+    vertical-align: top;
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    width: 20px;
+}
+
+
+.ecologylab-metadataContainer .ecologylab-labelCol .ecologylab-noShow{
+    display: none;
+}
+.ecologylab-noShow{
+    display: none;
+}
+.ecologylab-metadataContainer .ecologylab-valueCol{
+    display: table-cell;
+    vertical-align: top;
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+.ecologylab-metadataContainer a{
+    color: black;
+    font-size: 13px;
+}
+
+.ecologylab-metadataContainer a:hover{
+    color: gray;
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldLabelContainer{
+    color: #808080;
+
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    width: auto;
+    min-height: 19px;
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldLabelContainerOpened{
+    color: #888;
+
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    width: auto;
+    min-height: 17px;
+    margin-right: -3px;
+
+    border-left: 3px solid rgb(122, 122, 122);
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldValueContainer{
+
+
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    width: auto;
+    max-width: 540px;
+    min-height: 19px;
+    height: 19px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    transition: height 0.3s;
+    -moz-transition: height 0.3s; /* Firefox 4 */
+    -webkit-transition: height 0.3s; /* Safari and Chrome */
+    -o-transition: height 0.3s; /* Opera */
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldValueContainer:hover{
+    height: auto;
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldValueImage{
+	height: auto;
+	max-width: 100%;
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldValueContainerInstagramPostImage{
+	height: 500px;
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldChildContainer{
+
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    width: auto;
+    min-height: 19px;
+    text-overflow: ellipsis;
+
+    padding-left: 8px;
+}
+
+.ecologylab-metadataContainer .ecologylab-fieldCompositeContainer{
+
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    width: auto;
+    min-height: 19px;
+    text-overflow: ellipsis;
+
+    padding-left: 8px;
+}
+
+.ecologylab-metadataContainer .ecologylab-expandButton{
+    width: 18px;
+    height: 18px;
+    border-radius: 8px;
+    float: left;
+    margin: 1px 4px 1px 4px;
+    background: rgb(213, 228, 209);
+}
+.ecologylab-metadataContainer .ecologylab-expandButton:hover{
+    background: rgb(134, 155, 128);
+    cursor: pointer;
+}
+
+.ecologylab-metadataContainer .ecologylab-collapseButton{
+    width: 18px;
+    height: 18px;
+    border-radius: 8px;
+    float: left;
+    margin: 1px 4px 1px 4px;
+    background: rgb(230, 200, 200);
+}
+.ecologylab-metadataContainer .ecologylab-collapseButton:hover{
+    background: rgb(194, 152, 152);
+    cursor: pointer;
+}
+
+.ecologylab-metadataContainer .ecologylab-expandSymbol{
+    position: absolute;
+    background: #ACACAC;
+    width: 2px;
+    height: 12px;
+    margin: 3px 7px 2px 8px;
+    pointer-events: none;
+}
+
+.ecologylab-metadataContainer .ecologylab-collapseSymbol{
+    position: absolute;
+    background: #ACACAC;
+    width: 12px;
+    height: 2px;
+    margin: 8px 2px 7px 3px;
+    pointer-events: none;
+}
+
+.ecologylab-metadataContainer .ecologylab-openedSymbol{
+    position: relative;
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 6px;
+    border: 2px solid darkgray;
+}
+
+.ecologylab-metadataContainer .ecologylab-loadingRow{
+    border-radius: 8px;
+    height: 15px;
+    margin-bottom: 4px;
+    padding: 2px 16px 2px 8px;
+    white-space: nowrap;
+}
+
+.ecologylab-metadataContainer .ecologylab-nestedPad{
+    padding: 0px;
+    border-left: 1px solid #ccc;
+}
+
+.ecologylab-metadataContainer .ecologylab-citeULikeButton:hover {
+    cursor: pointer;
+}
+
+.ecologylab-metadataContainer .ecologylab-citeULikeButton:hover img {
+    background: #8AA615;
+}
+
+.ecologylab-metadataContainer .ecologylab-citeULikeButton img{
+    width: 22px;
+    height: 18px;
+    background: white;
+    border-radius: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.ecologylab-lineCanvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    background: rgba(0, 0, 100, 0.0);
+}
+
+#ecologylab-content {
+    position: relative;
+}
+
+#ecologylab-bigLineCanvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    background: rgba(0, 0, 100, 0.0);
+}
+
+.ecologylab-hidden {
+    display: none;
+}
+
+.ecologylab-moreButton {
+    border-radius: 4px;
+    background: #ccc;
+    padding: 2px 6px;
+}
+
+.ecologylab-moreButton:hover {
+    cursor: pointer;
+    background: #bbb;
+}
+
+.ecologylab-tabbedICEContainer {
+
+}
+
+.ecologylab-tabMaster {
+
+}
+
+.ecologylab-tabParent {
+
+}
+
+.ecologylab-tabLabel {
+    position: absolute;
+    background: #282828;
+    left: -31px;
+    width: 64px;
+    height: 18px;
+    padding: 2px 4px 2px 10px;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    border: 1px solid gray;
+    border-right-color: white;
+    color: white;
+}
+
+
+.ecologylab-tabLabel:hover {
+    cursor: pointer;
+    background: #ccc;
+    color: white;
+    font-weight: 800;
+}
+
+.ecologylab-tabLabel .ecologylab-hidden {
+    display: none;
+}
+
+.ecologylab-tabLabel span{
+    position: absolute;
+    left: 27px;
+}
+
+.ecologylab-tabLabel .ecologylab-refreshButton{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    background: #aaa;
+    border-radius: 10px;
+    padding: 2px;
+    margin: -1px;
+    left: 3px;
+    opacity: 0.8;
+}
+
+.ecologylab-tabLabel .ecologylab-refreshButton:hover{
+    background: #777;
+    opacity: 1.0
+}
+
+.ecologylab-tabValue {
+
+}
+
+.ecologylab-metadata_h1{
+	font-weight: bold;
+}
+
+.ecologylab-clippingFieldsTable {
+
+}
+p{
+
+}
+
+}
