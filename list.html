@@ -25,6 +25,9 @@
 	<script type="text/javascript" src="./BigSemanticsJavaScript/bsjsCore/RepoMan.js"></script>
 
 	<!--Webpage-specific javascript and CSS includes-->
+
+    <script src="./public/js/jquery-3.1.0.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./demo.js"></script>
 
     
@@ -85,42 +88,61 @@
 
 
 <!-- main -->
-<div id="filter" class="container-fluid">
+<div class="container-fluid">
 <div class="row">
 <!-- filter -->
 	<div class="col-sm-3 col-md-2 sidebar">
+	<div id="filter">
       <ul class="nav nav-sidebar">
         <li>
         	<div class="filter_name">Price</div>
 	        <div class="filter_list">
-		        <div class="checkbox">0-500<label><input type="checkbox"></label></div>
-		        <div class="checkbox">500-1000<label><input type="checkbox"></label></div>
-		        <div class="checkbox">1000-1500<label><input type="checkbox"></label></div>
+		        <div class="checkbox"><label><input type="checkbox"></label>0-500</div>
+		        <div class="checkbox"><label><input type="checkbox"></label>500-1000</div>
+		        <div class="checkbox"><label><input type="checkbox"></label>1000-1500</div>
 	        </div>
         </li>
         <li>
 			<div class="filter_name">Rating</div>
 	        <div class="filter_list">
-		        <div class="checkbox">0-1<label><input type="checkbox"></label></div>
-		        <div class="checkbox">1-2<label><input type="checkbox"></label></div>
-		        <div class="checkbox">2-3<label><input type="checkbox"></label></div>
-		        <div class="checkbox">3-4<label><input type="checkbox"></label></div>
-		        <div class="checkbox">4-5<label><input type="checkbox"></label></div>
+		        <div class="checkbox"><label><input type="checkbox"></label>0-1</div>
+		        <div class="checkbox"><label><input type="checkbox"></label>1-2</div>
+		        <div class="checkbox"><label><input type="checkbox"></label>2-3</div>
+		        <div class="checkbox"><label><input type="checkbox"></label>3-4</div>
+		        <div class="checkbox"><label><input type="checkbox"></label>4-5</div>
 	        </div>
         </li>
       </ul>
       <button class="btn btn-default">submit</button>
     </div>
+    </div>
 <!-- filter-end -->
 <!-- list -->
     <div class="col-sm-9 col-md-10 main">
-		<ul id="table" class="list-group">
-		</ul>
+	    <div id="sort">
+			<div class="dropdown" style="font-size: 17px">sort by:
+			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    Dropdown
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			    <li role="separator" class="divider"></li>
+			    <li><a href="#">Separated link</a></li>
+			  </ul>
+			</div>
+	    </div>
+	    <div>
+			<ul id="table" class="list-group">
+			</ul>
+		</div>
 	</div>
 <!-- list-end -->
 </div>
 </div>
-<!-- filter-end -->
+<!-- main-end -->
 </body>
 <script type="text/javascript">
 	function onLoadRenderingAll() {
