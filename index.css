@@ -1,0 +1,31 @@
+body {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.ck-slide {
+    width:1500px;
+    height:300px;
+    margin:0 auto;
+}
+.ck-slide ul.ck-slide-wrapper {
+    height:320px;
+}
+.note span {
+    float:right;
+}
+.whitebg {
+    background-color:white;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+#logo img{
+    width: 200px;
+}
+.form-inline {
+    margin-top: 40px;
+}
+#searchEngine {
+    width: 80%;
+}

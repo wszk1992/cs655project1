@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <link href="./public/css/slide.css" rel="stylesheet">
+    <link href="./public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet"></script>
+
+    <script src="./public/js/jquery-3.1.0.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/slide.js"></script>
+    
+</head>
+<body>
+
+<!-- ------------------------------------LOGO Start------------------------------------------------ -->
+<div class="row">
+  <div class="col-lg-1 col-md-2 col-md-offset-1">
+      <a id="logo" href="/">
+        <img src="./public/images/logo.jpg" alt="LOGO" />
+      </a>
+</div><!-- /.col-lg-6 -->
+<div class="col-lg-6 col-md-5 col-md-offset-1">
+    <div class="search">
+        <form id="searchForm" class="form-inline" method="get">
+          <input type="text" class="form-control" id="searchEngine" name="search" placeholder="Search for...">
+          <button type="submit" class="btn btn-default" type="button">Go!</button>
+        </form>
+    </div>
+</div>
+</div><!-- /.row -->
+<!-- ------------------------------------LOGO End------------------------------------------------ -->
+<!-- ------------------------------------nav start------------------------------------------------ -->
+
+
+    <div class="row">
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="col-md-10 col-sm-offset-2">
+                    <div style="margin:0 auto";>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Clothing</a></li>
+                                <li><a href="#">Beauty</a></li>
+                                <li><a href="#">Personal Care</a></li>
+                                <li><a href="#">Computer</a></li>
+                                <li><a href="#">Electronics</a></li>
+                                <li><a href="#">Books</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div><!-- /.container-fluid -->
+    <!-- ------------------------------------nav end------------------------------------------------ -->
+
+
+
+
+    <!-- ------------------------------------slide start------------------------------------------------ -->
+
+        <div margin=0 auto; class="ck-slide">
+            <ul class="ck-slide-wrapper">
+                <li>
+                    <a href="https://www.amazon.com/dp/B01BH83OOM/ref=ods_gw_d_h1_ha_fx_cdtprrec?pf_rd_r=K23W1FJ05JQWFZFGMAMV&pf_rd_p=eaee70fd-b8cc-44a6-a771-0a1f5e4af4f1">
+                    <img src="./public/images/1.jpg" alt="" style="width:1500px;"></a>
+                </li>
+                <li  style="display:none">
+                    <a href="https://www.amazon.com/dp/B00X4WHP5E/ref=ods_gw_d_h1_ha_dplr_MI?pf_rd_r=NEJ1CS2JWQGJGC3K9Y5J&pf_rd_p=43cc72b9-5dab-4ff8-81e5-507bba812223">
+                    <img  src="./public/images/2.jpg" align="middle" alt="" style="width:1500px;"></a>
+                </li>
+                <li style="display:none">
+                    <a href="http://www.bestbuy.com/site/promo/sonos-141665">
+                    <img src="./public/images/3.jpg" alt="" style="width:1500px;"></a>
+                </li>
+                <li style="display:none">
+                    <a href="https://www.bhphotovideo.com/c/promotion/12166/sony-a6500-and-rx100v.html">
+                    <img src="./public/images/4.jpg" alt="" style="width:1500px;"></a>
+                </li>
+                <li style="display:none">
+                    <a href="http://promotions.newegg.com/rosewill/r16-40/index.html?cm_sp=Homepage-Top2016-_-P8_rosewill%2fr16-40-_-http%3a%2f%2fpromotions.newegg.com%2frosewill%2fr16-40%2f1920x360.jpg&icid=371273">
+                    <img src="./public/images/5.jpg" alt="" style="height:300px;"></a>
+                </li>
+            </ul>
+            <a href="javascript:;" class="ctrl-slide ck-prev"></a>
+            <a href="javascript:;" class="ctrl-slide ck-next"></a>
+            <div class="ck-slidebox">
+                <div class="slideWrap">
+                    <ul class="dot-wrap">
+                        <li class="current"><em>1</em></li>
+                        <li><em>2</em></li>
+                        <li><em>3</em></li>
+                        <li><em>4</em></li>
+                        <li><em>5</em></li>
+                    </ul>
+             </div>
+         </div>
+    </div>
+    <script>
+        $('.ck-slide').ckSlide({
+            autoPlay:true
+            /*dir:"x"*/
+        });
+    </script>
+
+    <!-- ---------------------------------------slide end------------------------------------------------ -->
+
+<!-- --------------------------------------------recommend start------------------------------------------------------- -->
+    <div class="jumbotron" width="500px">
+        <div class="container">
+            <a href="./index.html">
+                <img src="./public/images/Deal-Zone-Logo.png"  style="padding:0 0 20px 0" width="200px" alt="DealZone" />
+             </a>
+             <div class="whitebg">
+                 <div class="col-md-6 col-sm-6" style="float:left">
+                     <a href="https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM/ref=sr_1_1?ie=UTF8&qid=1476157426&sr=8-1&keywords=kindle">
+                     <img src="./public/images/DealZone1.jpg" alt="" width="500px"></a>
+                     <p class="left">
+                     Price:<p style="color:#FF0000">$119.99</p><em style="color:#FF8C00">Save  $30.00</em>
+                     "Kindle Paperwhite E-reader - Black, 
+                     6" High-Resolution Display (300 ppi) with Built-in Light, 
+                     Wi-Fi - Includes Special Offers"
+                     </p>
+                 </div>
+             </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<html>
+
+   <div class="gallery-item-content" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);">
+					<h1 class="logo-image logo-image-watch"><span class="logo-image-label">Apple Watch Series 2</span></h1>
+					<h2 class="homepage-headline">Introducing Series 2.</h2>
+				</div>
+
+
+                <div class="gallery-slide-wrapper" style="transform: translate3d(-1033px, 0px, 0px);">
+			<a href="/iphone-7/" id="homepage-gallery-iphone" class="block gallery-item gallery-item-iphone gallery-item-dark ac-gallery-lastitem ac-gallery-previousitem" data-ac-gallery-item="" role="tabpanel" aria-hidden="true" style="transform: translate3d(0px, 0px, 0px);">
+				<div class="gallery-item-content" style="transform: translate3d(981.35px, 0px, 0px) scale3d(0.9, 0.9, 1);">
+					<h1 class="logo-image logo-image-iphone"><span class="logo-image-label">iPhone</span></h1>
+					<h2 class="homepage-headline">This is 7.</h2>
+				</div>
+				<figure class="gallery-image gallery-image-iphone" style="transform: translate3d(929.7px, 0px, 0px) scale3d(0.9, 0.9, 1);"></figure>
+			</a>
+			<a href="/apple-watch-series-2/" id="homepage-gallery-watch" class="block gallery-item gallery-item-watch ac-gallery-currentitem" data-ac-gallery-item="" role="tabpanel" style="transform: translate3d(1033px, 0px, 0px);">
+				<div class="gallery-item-content" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);">
+					<h1 class="logo-image logo-image-watch"><span class="logo-image-label">Apple Watch Series 2</span></h1>
+					<h2 class="homepage-headline">Introducing Series 2.</h2>
+				</div>
+				<figure class="gallery-image gallery-image-watch" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);"></figure>
+			</a>
+			<a href="/airpods/" id="homepage-gallery-airpods" class="block gallery-item gallery-item-airpods ac-gallery-nextitem" data-ac-gallery-item="" role="tabpanel" aria-hidden="true" style="transform: translate3d(2066px, 0px, 0px);">
+				<div class="gallery-item-content" style="transform: translate3d(206.6px, 0px, 0px) scale3d(1, 1, 1);">
+					<h1 class="logo-image logo-image-airpods"><span class="logo-image-label">AirPods</span></h1>
+					<h2 class="homepage-headline">Wireless. Effortless. Magical.</h2>
+				</div>
+				<figure class="gallery-image gallery-image-airpods" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);"></figure>
+			</a>
+			<a href="/apple-events/september-2016/" id="homepage-gallery-event" class="block gallery-item gallery-item-event gallery-item-dark" data-ac-gallery-item="" role="tabpanel" aria-hidden="true" style="transform: translate3d(3099px, 0px, 0px);">
+				<div class="gallery-item-content" style="transform: translate3d(206.6px, 0px, 0px) scale3d(1, 1, 1);">
+					<h1 class="logo-image logo-image-event"><span class="logo-image-label">Apple Special Event</span></h1>
+					<h2 class="homepage-headline">Watch the keynote.</h2>
+					<div class="play-icon"></div>
+				</div>
+				<figure class="gallery-image gallery-image-event" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);"></figure>
+			</a>
+		</div>
+
+
+        -->

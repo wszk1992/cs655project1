@@ -2,8 +2,7 @@
   "name": "simple-webcrawler-javascript",
   "version": "0.0.0",
   "description": "A simple webcrawler written in JavaScript",
-  "main": "crawler.js",
-  "author": "Stephen",
+  "main": "server.js",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^0.19.0",

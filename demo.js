@@ -127,67 +127,85 @@ function gagaOhLala(err, metadataAndMetametaData)
 
 //Writen by KAN ZHENG
 function showProduct(err, metadataAndMetametaData) {
+	var imageUnknown = "./public/images/no_0.jpg";
 	//To make metadata easier to use via js, first unwrap it (it's initially wrapped for cross-compatibility with C#)
 	var unwrappedMetadata = BSUtils.unwrap(metadataAndMetametaData.metadata);
 	var table = document.getElementById('table');
-
-	//we create a node to hold the linked image
-	//never trust metadata! Like file I/O you should wrap it try catch statements
-	try{
+	if(!err) {
+		//we create a node to hold the linked image
+		//never trust metadata! Like file I/O you should wrap it try catch statements
 		//product
-		var product = document.createElement('div');
-		product.className = "product";
+		var product = document.createElement('li');
+		product.className = "list-group-item";
+		product.id = "product";
 		table.appendChild(product);
 
 		//image
 		var product_img = document.createElement('img');
-		product_img.className = "product_img";
-		product_img.src = unwrappedMetadata.main_images[0].location;
+		product_img.id = "product_img";
+		try {
+			product_img.src = unwrappedMetadata.main_images[0].location;
+		} catch(e) {
+			product_img.src = imageUnknown;
+		}
 		product.appendChild(product_img);
 
 		//content
 		var product_content = document.createElement('div');
-		product_content.className = "product_content";
+		product_content.id = "product_content";
 		product.appendChild(product_content);
 
 		//source
 		var product_source = document.createElement('div');
-		product_source.className = "product_source";
+		product_source.id = "product_source";
 //		product_source.innerHTML = "FROM:";
 		product.appendChild(product_source);
 
 		//source_img
 		var product_source_img = document.createElement('img');
-		product_source_img.className = "product_source_img";
-		product_source_img.src = sourceImgDetect(unwrappedMetadata.mm_name);
+		product_source_img.id = "product_source_img";
+		try {
+			product_source_img.src = sourceImgDetect(unwrappedMetadata.mm_name);
+		} catch(e) {
+			product_source_img.src = imageUnknown;
+		}
 		product_source.appendChild(product_source_img);
 
 		//title
 		var product_title = document.createElement('a');
-		product_title.className = "product_title";
-		product_title.setAttribute("target", "_blank")
-		product_title.setAttribute("href", unwrappedMetadata.location);
-		product_title.innerHTML = unwrappedMetadata.title;
+		product_title.id = "product_title";
+		product_title.setAttribute("target", "_blank");
+		try {
+			product_title.setAttribute("href", unwrappedMetadata.location);
+		} catch(e) {
+			product_title.setAttribute("href", "#");
+		}
+		try {
+			product_title.innerHTML = unwrappedMetadata.title;
+		} catch(e) {
+			product_title.innerHTML = "undefined";
+		}
 		product_content.appendChild(product_title);		
 
 		//price
 		var product_price = document.createElement("p");
-		product_price.className = "product_price";
-		product_price.innerHTML = unwrappedMetadata.price;
+		product_price.id = "product_price";
+		try {
+			product_price.innerHTML = unwrappedMetadata.price;
+		} catch(e) {
+			product_price.innerHTML = "???$";
+		}
 		product_content.appendChild(product_price);
 
 		//rating
 		var product_rating = document.createElement("p");
-		product_rating.className = "product_rating";
-		product_rating.innerHTML = unwrappedMetadata.overall_rating;
+		product_rating.id = "product_rating";
+		try {
+			product_rating.innerHTML = unwrappedMetadata.overall_rating;
+		} catch(e) {
+			product_rating.innerHTML = "rating unknown";
+		}
 		product_content.appendChild(product_rating);
-
-		
-	}catch(e){
-		var textOutput = "the product image from amazon wrapper is experiencing problems, sorry :(";
-		var textNode = document.createTextNode(textOutput);
-		var textHold = document.appendChild(textNode);
-		table.appendChild(textNode);
 	}
 }
 
