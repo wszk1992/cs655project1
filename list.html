@@ -141,8 +141,9 @@
 <!-- compare list-->
 	<div class="col-sm-2 col-md-2">
 		<ul id="compare_list" class="list-group">
-			<form id="compare_form" action="/compare" method="get">
-			<button id="compare_list_button" class='btn btn-default' onclick="compare_submit()" type='button' style="display:none">compare</button>
+			<form id="compare_form" action="/compare?" method="get">
+				<input type = "hidden" name="compare" value="">
+				<button id="compare_list_button" class='btn btn-default' onclick="compare_submit()" type='button' style="display:none">compare</button>
 			</form>
 			<div id="compare_list_content"></div>
 
@@ -178,8 +179,13 @@
 	}
 
 	function add_compare(item) {
-		var link = item.children[1].children[0].href;
-		compare_list[link] = true;
+		var compare_link = item.children[1].children[0].href;
+		var compare_title = item.children[1].children[0].innerHTML;
+		var compare_img_link = item.children[0].src;
+		var compare_price = item.children[1].children[1].innerHTML;
+		var compare_rating = item.children[1].children[2].innerHTML;
+
+		compare_list[compare_link] = [compare_title, compare_img_link, compare_price, compare_rating];
 		var len = Object.keys(compare_list).length;
 		var button = document.getElementById("compare_list_button");
 		if(len) {
@@ -197,18 +203,18 @@
 
 		var compare = document.createElement("li");
 		compare.className = "list-group-item";
-		compare.id = link;
+		compare.id = compare_link;
 		//add img
 		var img = document.createElement("img");
-		img.src = item.children[0].src;
+		img.src = compare_img_link;
 		img.width = "200";
 		compare.appendChild(img)
 		//add title
 		var title = document.createElement("div");
 		var title_link = document.createElement("a");
 		title_link.setAttribute("target", "_blank");
-		title_link.href = link;
-		title_link.innerHTML = item.children[1].children[0].innerHTML;
+		title_link.href = compare_link;
+		title_link.innerHTML = compare_title;
 		title.appendChild(title_link);
 		compare.appendChild(title);
 
@@ -243,6 +249,18 @@
 
 	function compare_submit() {
 		var form = document.getElementById("compare_form");
+		var count = 1;
+		for(var key in compare_list) {
+			var title = compare_list[key][0];
+			var img = compare_list[key][1];
+			var price = compare_list[key][2];
+			var rating = compare_list[key][3];
+			form.children[0].value += key+'|'+title+'|'+img+'|'+price+'|'+rating;
+			if(count === 1) {
+				form.children[0].value += '&';
+			}
+			count++;
+		}
 		form.submit();
 	}
 </script>

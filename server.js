@@ -28,7 +28,10 @@ app.get('/', function (req, res){
 });
 
 app.get('/compare', function (req, res) {
-  res.render('./compare.html');
+  var compares = req.query.compare.split("&");
+  var compare1 = compares[0].split("|");
+  var compare2 = compares[1].split("|");
+  res.render("./compare.html",{compare1:JSON.stringify(compare1), compare2:JSON.stringify(compare2)})
 });
 
 app.get('/list', function (req, res){

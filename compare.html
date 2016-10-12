@@ -8,6 +8,9 @@
     <script src="./public/js/jquery-3.1.0.min.js"></script>
     <script src="./public/js/bootstrap.min.js"></script>
 	<style>
+    h1 {
+        text-align: center;
+    }
 	table {
     text-align:center;
 	}
@@ -24,7 +27,7 @@
 <!-- ------------------------------------LOGO Start------------------------------------------------ -->
 <div class="row">
   <div class="col-lg-1 col-md-2 col-md-offset-1">
-      <a id="logo" href="./main.html">
+      <a id="logo" href="/">
         <img src="./public/images/logo.jpg" alt="LOGO" />
       </a>
 </div><!-- /.col-lg-6 -->
@@ -64,7 +67,7 @@
     </div><!-- /.container-fluid -->
     <!-- ------------------------------------nav end------------------------------------------------ -->
 	
-	<h1>Comparing Products</h1>
+	<h1 >Comparing Products</h1>
 	<table border = 3 width=100% height="50"><col width=82><col width=370><col width=370>
 				<tr>
 				<th>Info</th>
@@ -73,22 +76,45 @@
 				</tr>
 				<tr>
 				<td>Picture </td>
-				<td><img src =/images/product1.jpg height = "300" width = "300"></img> </td>
-				<td><img src =/images/product1.jpg height = "300" width = "300"></img> </td>
+				<td><img src="#" id="compare_img0" height = "300" width = "300"></img> </td>
+				<td><img src="#" id="compare_img1" height = "300" width = "300"></img> </td>
 				</tr>
 				<tr>
 				<td>Name </td>
-				<td>Front View </td>
-				<td>Front View </td>
+				<td><a href="#" id="compare_title0">Undefined</a></td>
+				<td><a id="compare_title1">Undefined</a></td>
 				</tr>
 				<tr>
 				<td>Price </td>
-				<td style="color:#FF0000">$Price1 </td>
-				<td style="color:#FF0000">$Price2 </td>
+				<td id="compare_price0" style="color:#FF0000">Undefined </td>
+				<td id="compare_price1" style="color:#FF0000">Undefined </td>
 				</tr>
 				<tr>
-				<td>Rate </td>
-				<td>Front View </td>
-				<td>Front View </td>
+				<td>Rating </td>
+				<td id="compare_rating0">Undefined </td>
+				<td id="compare_rating1">Undefined </td>
 				</tr>
-	</body>
+    </table>
+</body>
+
+<script>
+    var compare1 = <%- compare1%>;
+    var compare2 = <%- compare2%>;
+    var compares = [compare1, compare2];
+    //console.log("compares: " );
+    //console.log(compares[0] ); 
+    for(var i = 0; i < compares.length; i++) {
+        var title = document.getElementById("compare_title" + i);
+        var img = document.getElementById("compare_img" + i);
+        var price = document.getElementById("compare_price" + i);
+        var rating = document.getElementById("compare_rating" + i);
+        console.log(compares[i][0]);
+        title.href = compares[i][0];
+        title.innerHTML = compares[i][1];
+        img.src = compares[i][2];
+        price.innerHTML = compares[i][3];
+        rating.innerHTML = compares[i][4];
+    }
+</script>
+</html>
+
