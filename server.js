@@ -13,7 +13,7 @@ var pageToVisit = "https://www.amazon.com/s/";
 var searchResult = 'tv';
 var sortResult = "relevancerank";
 var urlList = [];
-
+var itemNum = 15;
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'ejs');
 app.set('views', __dirname);
@@ -57,7 +57,7 @@ app.get('/list', function (req, res){
       var $ = cheerio.load(body);
       console.log("Page title:  " + $('title').text());
       //console.log("product url list:");
-      for(var i = 0; i < 5; i++) {
+      for(var i = 0; i < itemNum; i++) {
 
         var result = "#result_" + i;
         try {
