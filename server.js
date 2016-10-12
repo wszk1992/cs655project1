@@ -28,7 +28,7 @@ app.get('/', function (req, res){
 });
 
 app.get('/compare', function (req, res) {
-  
+  res.render('./compare.html');
 });
 
 app.get('/list', function (req, res){
