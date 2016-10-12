@@ -104,3 +104,9 @@ h1 {
 .checkbox label input {
 	margin-top: 8px;
 }
+
+#compare {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

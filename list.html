@@ -32,12 +32,11 @@
 
     
     <link href="./public/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="./demo.css" rel="stylesheet" type="text/css">
+    <link href="./list.css" rel="stylesheet" type="text/css">
 
 
     <!-- I like the roboto font because it makes me feel like a real developer-->
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500,400italic,500italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
-
 </head>
 
 
@@ -91,7 +90,7 @@
 <div class="container-fluid">
 <div class="row">
 <!-- filter -->
-	<div class="col-sm-3 col-md-2 sidebar">
+	<div class="col-sm-2 col-md-2 sidebar">
 	<div id="filter">
       <ul class="nav nav-sidebar">
         <li>
@@ -118,28 +117,38 @@
     </div>
 <!-- filter-end -->
 <!-- list -->
-    <div class="col-sm-9 col-md-10 main">
+    <div class="col-sm-8 col-md-8 main">
 	    <div id="sort">
-			<div class="dropdown" style="font-size: 17px">sort by:
+			<div class="dropdown" style="font-size: 17px">sort by: 
 			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			    Dropdown
+			    Relevance
 			    <span class="caret"></span>
 			  </button>
 			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-			    <li><a href="#">Action</a></li>
-			    <li><a href="#">Another action</a></li>
-			    <li><a href="#">Something else here</a></li>
-			    <li role="separator" class="divider"></li>
-			    <li><a href="#">Separated link</a></li>
+			    <li><a href="#">Relevance</a></li>
+			    <li><a href="#">Price low to high</a></li>
+			    <li><a href="#">Price high to low</a></li>
+			    <li><a href="#">Rating</a></li>
 			  </ul>
 			</div>
 	    </div>
-	    <div>
+	    <div id="list">
 			<ul id="table" class="list-group">
 			</ul>
 		</div>
 	</div>
 <!-- list-end -->
+<!-- compare list-->
+	<div class="col-sm-2 col-md-2">
+		<ul id="compare_list" class="list-group">
+			<form id="compare_form" action="/compare" method="get">
+			<button id="compare_list_button" class='btn btn-default' onclick="compare_submit()" type='button' style="display:none">compare</button>
+			</form>
+			<div id="compare_list_content"></div>
+
+		</ul>
+	</div>
+<!-- compare list end-->
 </div>
 </div>
 <!-- main-end -->
@@ -154,6 +163,87 @@
 			onLoadSemantics(url);
 		}
 		console.log(urlList.length + " products");
+	}
+
+	var compare_list = {};
+
+	function compare_checkbox(obj) {
+		var item = obj.parentNode.parentNode.parentNode.parentNode;
+		//console.log(item);
+		if(obj.checked) {
+			add_compare(item);
+		}else {
+			remove_compare(item);
+		}
+	}
+
+	function add_compare(item) {
+		var link = item.children[1].children[0].href;
+		compare_list[link] = true;
+		var len = Object.keys(compare_list).length;
+		var button = document.getElementById("compare_list_button");
+		if(len) {
+			button.style.display = "inline";
+			if(len == 2) {
+				button.disabled = "";
+				button.innerHTML = "compare";
+			}else {
+				button.disabled = "disabled";
+				button.innerHTML = "only 2 items can be compare";
+			}
+		}
+
+		var list = document.getElementById("compare_list_content");
+
+		var compare = document.createElement("li");
+		compare.className = "list-group-item";
+		compare.id = link;
+		//add img
+		var img = document.createElement("img");
+		img.src = item.children[0].src;
+		img.width = "200";
+		compare.appendChild(img)
+		//add title
+		var title = document.createElement("div");
+		var title_link = document.createElement("a");
+		title_link.setAttribute("target", "_blank");
+		title_link.href = link;
+		title_link.innerHTML = item.children[1].children[0].innerHTML;
+		title.appendChild(title_link);
+		compare.appendChild(title);
+
+		list.appendChild(compare);
+
+		console.log(Object.keys(compare_list).length);
+		//console.log(compare_list);
+	}
+
+	function remove_compare(item) {
+		var link = item.children[1].children[0].href;
+		delete compare_list[link];
+		var len = Object.keys(compare_list).length;
+		var button = document.getElementById("compare_list_button");
+
+		if(len) {
+			if(len == 2) {
+				button.disabled = "";
+				button.innerHTML = "compare";
+			}else {
+				button.disabled = "disabled";
+				button.innerHTML = "only 2 items can be compare";
+			}
+		}else {
+			button.style.display = "none";
+		}
+		var compare = document.getElementById(link);
+		compare.parentElement.removeChild(compare);
+
+		console.log(Object.keys(compare_list).length);
+	}
+
+	function compare_submit() {
+		var form = document.getElementById("compare_form");
+		form.submit();
 	}
 </script>
 

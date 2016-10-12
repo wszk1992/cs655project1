@@ -7,6 +7,10 @@ body {
     height:300px;
     margin:0 auto;
 }
+
+ck-slide img {
+    width:1500;
+}
 .ck-slide ul.ck-slide-wrapper {
     height:320px;
 }
@@ -29,3 +33,4 @@ body {
 #searchEngine {
     width: 80%;
 }
+

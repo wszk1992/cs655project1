@@ -3,12 +3,15 @@ var cheerio = require('cheerio');
 var URL = require('url-parse');
 var express = require('express');
 var ejs = require('ejs');
-var engines = require('consolidate');
+
 var app = express();
 const PORT=8080; 
-
-var pageToVisit = "https://www.amazon.com/s/field-keywords=";
+var keywords = "keywords";
+var sort = "sort";
+var sortBy = {"price-asc": "price-asc-rank", "price-desc": "price-desc-rank", "rating": "review-rank", "relevance": "relevancerank"};
+var pageToVisit = "https://www.amazon.com/s/";
 var searchResult = 'tv';
+var sortResult = "relevancerank";
 var urlList = [];
 
 app.engine('html', ejs.renderFile);
@@ -24,17 +27,24 @@ app.get('/', function (req, res){
   }
 });
 
+app.get('/compare', function (req, res) {
+  
+});
+
 app.get('/list', function (req, res){
   urlList = [];
   searchResult = 'tv';
   if(req.query.search) {
-    console.log("has query:" + req.query.search);
+    console.log("search:" + req.query.search);
     searchResult = req.query.search;
-  }else {
-    console.log("no query");
   }
-  console.log("Visiting page " + pageToVisit + searchResult);
-  request(pageToVisit + searchResult, function(error, response, body) {
+  if(req.query.sort) {
+    console.log("sort:" + req.query.sort);
+    sortResult = sortBy[req.query.sort];
+  }
+  var urlResult = pageToVisit + keywords + "=" + searchResult + "&" + sort + "=" + sortResult;
+  console.log("Visiting page " + urlResult);
+  request(urlResult, function(error, response, body) {
     if(error) {
       console.log("Error: " + error);
     }
