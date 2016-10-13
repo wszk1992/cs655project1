@@ -110,3 +110,8 @@ h1 {
     bottom: 0;
     right: 0;
 }
+
+#compare_list {
+	position: fixed;
+	top:120px;
+}
